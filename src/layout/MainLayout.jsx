@@ -12,12 +12,12 @@ const MainLayout = () => {
       <section className='padding-x py-5 border-b-[1px]'>
         <Nav />
       </section>
-      <main className='flex-grow'>
+      <section className='flex-grow'>
         <Outlet />
-      </main>
-      <section className='padding-t bg-black '>
+      </section>
+      <section className='padding-x padding-t bg-black '>
         <Footer />
-        <div className='sm:mt-24 mt-12  border-t-[0.7px] pt-2 border-white opacity-40'>
+        <div className='sm:mt-24 mt-12 border-t-[0.7px] pt-2 border-white opacity-40'>
           <p className='text-white  text-center font-thin'>
             &copy; Copyright Giovanni 2024. All right reserved
           </p>

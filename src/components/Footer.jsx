@@ -10,7 +10,7 @@ import send from '../../public/assets/icon-send.png'
 
 const Footer = () => {
   return (
-    <footer className='gap-10 lg:gap-0 max-container text-white flex flex-col justify-between lg:flex-row tracking-wide'>
+    <footer className='gap-10 lg:gap-0 max-container text-white flex flex-col  lg:flex-row justify-between tracking-wide'>
       <div>
         <h1 className='text-2xl font-semibold'>Exclusive</h1>
         <p className='my-5'>Subscribe</p>

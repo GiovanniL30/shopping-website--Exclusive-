@@ -14,6 +14,14 @@
     max-width: 1440px;
     margin: 0 auto;
   }
+
+  .icon-button {
+    @apply absolute cursor-pointer right-3 top-3 bg-white p-1 rounded-full;
+  }
+
+  .icon-button:hover {
+    @apply opacity-50 transition-all duration-500 ease-in-out;
+  }
 }
 
 @layer utilities {

@@ -1,14 +1,34 @@
 import React from 'react'
+import {
+  BestSelling,
+  Category,
+  ExploreProducts,
+  FlashSales,
+  HeroSection,
+  NewArrival,
+} from '../sections'
 
 const Home = () => {
   return (
     <main>
-      <section className='padding'>Product feature</section>
-      <section className='padding'>Flash Sales</section>
-      <section className='padding'>Browse Category</section>
-      <section className='padding'>Best Selling Products</section>
-      <section className='padding'>Explore Our Products</section>
-      <section className='padding'>New Arrival</section>
+      <section className='padding'>
+        <HeroSection />
+      </section>
+      <section className='padding'>
+        <FlashSales />
+      </section>
+      <section className='padding'>
+        <Category />
+      </section>
+      <section className='padding'>
+        <BestSelling />
+      </section>
+      <section className='padding'>
+        <ExploreProducts />
+      </section>
+      <section className='padding'>
+        <NewArrival />
+      </section>
     </main>
   )
 }
