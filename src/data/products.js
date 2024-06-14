@@ -27,7 +27,7 @@ export const products = [
   },
   {
     productId: 3,
-    totalSold: 10,
+    totalSold: 290,
     name: 'Kids Electric Car',
     image: '../../public/productImage/car.png',
     description:
