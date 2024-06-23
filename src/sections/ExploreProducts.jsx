@@ -1,8 +1,8 @@
 import React from 'react'
 import Heading from '../components/Heading'
-import { products } from '../data/products'
+
 import ProductCard from '../components/ProductCard'
-const ExploreProducts = () => {
+const ExploreProducts = ({ products }) => {
   return (
     <div className='max-container'>
       <Heading text='Our Products' />

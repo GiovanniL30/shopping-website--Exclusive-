@@ -1,12 +1,13 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import Heading from '../components/Heading'
-import { products } from '../data/products'
 import ProductCard from '../components/ProductCard'
 
-const BestSelling = () => {
-  const bestSellingProducst = products.filter((product) => {
-    return product.totalSold > 100
-  })
+const BestSelling = ({ products }) => {
+  const bestSellingProducst = useMemo(() => {
+    return products.filter((product) => {
+      return product.totalSold > 100
+    })
+  }, [products])
 
   return (
     <div className='max-container'>

@@ -1,23 +1,20 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import Heading from '../components/Heading'
 import ProductCard from '../components/ProductCard'
-import { products } from '../data/products'
 
-const FlashSales = () => {
-  const flashSaleProducts = products
-    .filter((product) => {
-      return product.discountPercentage !== 0
-    })
-    .sort((a, b) => a.discountPercentage - b.discountPercentage)
-    .reverse()
+const FlashSales = ({ products }) => {
+  const flashSaleProducts = useMemo(() => {
+    return products
+      .filter((product) => {
+        return product.discountPercentage !== 0
+      })
+      .sort((a, b) => a.discountPercentage - b.discountPercentage)
+      .reverse()
+  }, [products])
 
   return (
     <div className='max-container'>
       <Heading text="Today's" />
-
-      {
-        //flash sale
-      }
 
       <FlashSaleTimer />
 
