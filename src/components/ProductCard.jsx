@@ -31,15 +31,16 @@ const ProductCard = ({
     }
   }
 
-  const computedPrice = discount
-    ? (price * (1 - discount / 100)).toFixed(2)
-    : price.toFixed(2)
+  const computedPrice =
+    discount !== 0
+      ? (price * (1 - discount / 100)).toFixed(2)
+      : price.toFixed(2)
 
   return (
     <div className='flex flex-col gap-2 w-full'>
       <div className='w-full h-[200px] p-2 group relative bg-gray-100 rounded flex justify-center items-center py-10 overflow-hidden hover:'>
         <img className='object-contain h-full' src={image} alt='bag' />
-        {discount && <Tag color={color} text={`-${discount}%`} />}
+        {discount !== 0 && <Tag color={color} text={`-${discount}%`} />}
 
         <div className='icon-button'>
           <img src={heart} alt='heart' />
@@ -54,7 +55,7 @@ const ProductCard = ({
       <h1 className='font-semibold'>{name}</h1>
       <div className='flex gap-3 font-semibold text-secondary2'>
         ${computedPrice}
-        {discount && (
+        {discount !== 0 && (
           <div className='relative text-black opacity-50'>
             ${price}
             <div className='absolute w-full h-[1px] bg-black top-1/2'></div>
