@@ -15,7 +15,7 @@ const MainLayout = () => {
       <section className='flex-grow'>
         <Outlet />
       </section>
-      <section className='padding-x padding-t bg-black '>
+      <section className='padding-x padding-t bg-black'>
         <Footer />
         <div className='sm:mt-24 mt-12 border-t-[0.7px] pt-2 border-white opacity-40'>
           <p className='text-white  text-center font-thin'>

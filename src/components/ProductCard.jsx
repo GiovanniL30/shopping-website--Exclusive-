@@ -36,8 +36,8 @@ const ProductCard = ({
     : price.toFixed(2)
 
   return (
-    <div className='flex flex-col gap-2 w-[250px]'>
-      <div className='h-[200px] p-2 group relative bg-gray-100 rounded flex justify-center items-center py-10 overflow-hidden hover:'>
+    <div className='flex flex-col gap-2 w-full'>
+      <div className='w-full h-[200px] p-2 group relative bg-gray-100 rounded flex justify-center items-center py-10 overflow-hidden hover:'>
         <img className='object-contain h-full' src={image} alt='bag' />
         {discount && <Tag color={color} text={`-${discount}%`} />}
 

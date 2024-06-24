@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo, useState } from 'react'
 import Heading from '../components/Heading'
 import ProductCard from '../components/ProductCard'
+import ProductsGrid from '../components/ProductsGrid'
 
 const FlashSales = ({ products }) => {
   const flashSaleProducts = useMemo(() => {
@@ -19,21 +20,7 @@ const FlashSales = ({ products }) => {
       <FlashSaleTimer />
 
       <div className='mt-7'>
-        <div className='flex flex-wrap justify-center gap-10 md:justify-start'>
-          {flashSaleProducts.map((product) => {
-            return (
-              <ProductCard
-                key={product.id}
-                name={product.name}
-                star={product.star}
-                price={product.price}
-                totalReview={product.totalReview}
-                image={product.image}
-                discount={product.discountPercentage}
-              />
-            )
-          })}
-        </div>
+        <ProductsGrid products={flashSaleProducts} />
       </div>
     </div>
   )

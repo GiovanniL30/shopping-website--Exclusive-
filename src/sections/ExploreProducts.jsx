@@ -1,7 +1,7 @@
 import React from 'react'
 import Heading from '../components/Heading'
 
-import ProductCard from '../components/ProductCard'
+import ProductsGrid from '../components/ProductsGrid'
 const ExploreProducts = ({ products }) => {
   return (
     <div className='max-container'>
@@ -9,26 +9,7 @@ const ExploreProducts = ({ products }) => {
       <h1 className='heading'>Explore Our Products</h1>
 
       <div className='mt-7'>
-        <div className='flex flex-wrap justify-center gap-10 md:justify-start'>
-          {products.map((product) => {
-            return (
-              <ProductCard
-                color='button1'
-                key={product.id}
-                name={product.name}
-                star={product.star}
-                price={product.price}
-                totalReview={product.totalReview}
-                image={product.image}
-                discount={
-                  product.discountPercentage === 0
-                    ? null
-                    : product.discountPercentage
-                }
-              />
-            )
-          })}
-        </div>
+        <ProductsGrid products={products} />
       </div>
     </div>
   )
